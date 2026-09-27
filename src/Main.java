@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        int num, tent, dif;
+        int num, tent, dif, cont = 0;
         Random random = new Random();
         Scanner sc = new Scanner(System.in);
 
@@ -20,8 +20,20 @@ public class Main {
             num = random.nextInt(11);
             System.out.println("Digite um número de 1 a 10: ");
             tent = sc.nextInt();
+            cont++;
             
-          
+            
+            
+            while (tent != num){
+                System.out.println("Você errou, tente novamente!");
+                System.out.println("Digite um número de 1 a 10: ");
+                tent = sc.nextInt();
+                cont++;
+            }
+
+            System.out.printf("Parabéns! Você acertou em %d tentativas", cont);
+
+
             
         }
         else if(dif == 2){
